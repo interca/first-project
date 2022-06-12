@@ -19,6 +19,8 @@ public class radixsory {
         for (int i = 0, n = 1; i < maxsize; i++, n = n * 10) {
             for (int j = 0; j < a.length; j++) {
                 int dignumber = a[j] / n % 10;//取出每个元素对应位数的值
+                //System.out.println(dignumber
+                //);
                 radix[dignumber][number[dignumber]] = a[j];//将对应值放入桶中
                 number[dignumber]++;//将对应桶元素个数加一
             }
@@ -35,7 +37,7 @@ public class radixsory {
         }
     }
     public static void main(String[] args) {
-        int []a={5,4,7777,22,45,14,16,17,32,65,48,87,222};
+        int []a={4,5,33,12,1,45,1,12,222,3};
         radixsory p=new radixsory();
         p.radsort(a);
         System.out.println(Arrays.toString(a));
